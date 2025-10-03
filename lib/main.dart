@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const TransportHomePage(),
       routes: {
-        '/transport': (context) => const IntegratedTransportPage(),
+        '/transport': (context) => const IntegratedTransportPageComplete(),
         '/about': (context) => const AboutCompletePage(),
         '/settings': (context) => const SettingsPage(),
       },
