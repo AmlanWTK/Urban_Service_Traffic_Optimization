@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:urban_service_traffic_optimization/models/osm_route_model.dart';
+import 'package:urban_service_traffic_optimization/models/traffic_segment_models.dart';
 import 'package:urban_service_traffic_optimization/screens/transport_planner.dart';
 import 'package:urban_service_traffic_optimization/services/newservices/gtfs_service.dart';
 import 'dart:math' as math;

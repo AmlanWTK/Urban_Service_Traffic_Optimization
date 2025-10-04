@@ -5,6 +5,9 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
+import 'package:urban_service_traffic_optimization/models/osm_road_model.dart';
+import 'package:urban_service_traffic_optimization/models/osm_route_model.dart';
+import 'package:urban_service_traffic_optimization/models/traffic_segment_models.dart';
 import 'package:xml/xml.dart';
 
 /// Fixed OSM Traffic Service - Improved XML parsing and error handling
@@ -584,78 +587,5 @@ out geom;
   }
 }
 
-/// OSM Road model
-class OSMRoad {
-  final String id;
-  final String name;
-  final String highwayType;
-  final List<LatLng> points;
-  final int speedLimit;
-  final int maxSpeed;
 
-  OSMRoad({
-    required this.id,
-    required this.name,
-    required this.highwayType,
-    required this.points,
-    required this.speedLimit,
-    required this.maxSpeed,
-  });
-}
 
-/// Route model
-class OSMRoute {
-  final List<LatLng> points;
-  final double distance; // in meters
-  final Duration duration;
-  final List<OSMRoad> roads;
-  final double averageDelay; // percentage
-
-  OSMRoute({
-    required this.points,
-    required this.distance,
-    required this.duration,
-    required this.roads,
-    required this.averageDelay,
-  });
-
-  String get formattedDistance {
-    if (distance >= 1000) {
-      return '${(distance / 1000).toStringAsFixed(1)} km';
-    } else {
-      return '${distance.toInt()} m';
-    }
-  }
-
-  String get formattedDuration {
-    final hours = duration.inHours;
-    final minutes = duration.inMinutes % 60;
-    
-    if (hours > 0) {
-      return '${hours}h ${minutes}min';
-    } else {
-      return '${minutes}min';
-    }
-  }
-}
-
-/// Traffic segment model
-class TrafficSegment {
-  final LatLng start;
-  final LatLng end;
-  final String trafficLevel;
-  final Color color;
-  final String roadType;
-  final int speedLimit;
-  final String roadName;
-
-  TrafficSegment({
-    required this.start,
-    required this.end,
-    required this.trafficLevel,
-    required this.color,
-    required this.roadType,
-    required this.speedLimit,
-    required this.roadName,
-  });
-}

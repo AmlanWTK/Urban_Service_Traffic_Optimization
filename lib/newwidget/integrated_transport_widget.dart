@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:latlong2/latlong.dart';
 
 import 'package:urban_service_traffic_optimization/models/gtfs_models.dart';
+import 'package:urban_service_traffic_optimization/models/osm_route_model.dart';
 import 'package:urban_service_traffic_optimization/services/newservices/gtfs_service.dart';
 import 'package:urban_service_traffic_optimization/services/osm_only_traffic_service.dart';
 import 'package:url_launcher/url_launcher.dart';

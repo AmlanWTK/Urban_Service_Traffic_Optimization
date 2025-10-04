@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:urban_service_traffic_optimization/models/osm_route_model.dart';
+import 'package:urban_service_traffic_optimization/models/traffic_segment_models.dart';
 import 'package:urban_service_traffic_optimization/services/osm_only_traffic_service.dart';
 import 'package:urban_service_traffic_optimization/widgets/osm_only_traffic_widget.dart';
 
