@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:urban_service_traffic_optimization/models/osm_route_model.dart';
 import 'package:urban_service_traffic_optimization/models/traffic_segment_models.dart';
@@ -310,11 +311,11 @@ class _IntegratedTransportPageCompleteState extends State<IntegratedTransportPag
       context: context,
       builder: (context) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Row(
+        title:  Row(
           children: [
             Icon(Icons.local_taxi, color: Colors.orange),
             SizedBox(width: 8),
-            Text('Ride-share Options'),
+            Text('Ride-share Options', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
           ],
         ),
         content: Container(
@@ -472,7 +473,7 @@ class _IntegratedTransportPageCompleteState extends State<IntegratedTransportPag
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(
+                    style:  GoogleFonts.playfairDisplay(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
@@ -883,13 +884,13 @@ class _IntegratedTransportPageCompleteState extends State<IntegratedTransportPag
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('OSM Traffic Map'),
+        title: Text('OSM Traffic Map', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
         backgroundColor: Colors.green.shade700,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/transport-settings');
+              Navigator.pushNamed(context, '/settings');
             },
             icon: const Icon(Icons.settings),
             tooltip: 'Settings',
@@ -910,27 +911,27 @@ class _IntegratedTransportPageCompleteState extends State<IntegratedTransportPag
               }
             },
             itemBuilder: (context) => [
-              const PopupMenuItem<String>(
+               PopupMenuItem<String>(
                 value: 'stats',
                 child: ListTile(
                   leading: Icon(Icons.analytics, color: Colors.purple),
-                  title: Text('Statistics'),
+                  title: Text('Statistics',style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
                   dense: true,
                 ),
               ),
-              const PopupMenuItem<String>(
+               PopupMenuItem<String>(
                 value: 'about',
                 child: ListTile(
                   leading: Icon(Icons.info, color: Colors.blue),
-                  title: Text('About'),
+                  title: Text('About',style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
                   dense: true,
                 ),
               ),
-              const PopupMenuItem<String>(
+               PopupMenuItem<String>(
                 value: 'home',
                 child: ListTile(
                   leading: Icon(Icons.home, color: Colors.orange),
-                  title: Text('Home'),
+                  title: Text('Home',style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
                   dense: true,
                 ),
               ),
@@ -1107,7 +1108,7 @@ class _IntegratedTransportPageCompleteState extends State<IntegratedTransportPag
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   _buildModeButton(TransportModeType.driving, Icons.directions_car, 'Drive', Colors.blue),
-                  _buildModeButton(TransportModeType.transit, Icons.directions_bus, 'Transit', Colors.green),
+                 
                   _buildModeButton(TransportModeType.rideshare, Icons.local_taxi, 'Ride', Colors.orange),
                   _buildModeButton(TransportModeType.all, Icons.compare_arrows, 'All', Colors.purple),
                 ],

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:urban_service_traffic_optimization/screens/traffic_stats_page_screen.dart';
 
 /// Home page with introduction
 class OSMTrafficHomePage extends StatelessWidget {
@@ -192,7 +193,7 @@ class OSMTrafficHomePage extends StatelessWidget {
                       Expanded(
                         child: OutlinedButton.icon(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/stats');
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>TrafficStatsPage()));
                           },
                           icon: const Icon(Icons.analytics),
                           label: const Text('Statistics'),

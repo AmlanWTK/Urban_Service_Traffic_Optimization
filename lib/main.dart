@@ -5,6 +5,7 @@ import 'package:urban_service_traffic_optimization/screens/NewSScreens/about_com
 import 'package:urban_service_traffic_optimization/screens/NewSScreens/integrated_transport_page.dart';
 import 'package:urban_service_traffic_optimization/screens/NewSScreens/setting_page.dart';
 import 'package:urban_service_traffic_optimization/screens/NewSScreens/transport_homepage.dart';
+import 'package:urban_service_traffic_optimization/screens/traffic_stats_page_screen.dart';
 
 import 'package:urban_service_traffic_optimization/services/newservices/gtfs_service.dart';
 
@@ -69,6 +70,7 @@ class MyApp extends StatelessWidget {
         '/transport': (context) => const IntegratedTransportPageComplete(),
         '/about': (context) => const AboutCompletePage(),
         '/settings': (context) => const SettingsPage(),
+        '/stats': (context) => const TrafficStatsPage(),
       },
     );
   }

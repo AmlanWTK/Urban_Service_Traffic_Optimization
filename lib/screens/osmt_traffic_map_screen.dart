@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:urban_service_traffic_optimization/models/osm_route_model.dart';
 import 'package:urban_service_traffic_optimization/models/traffic_segment_models.dart';
 import 'package:urban_service_traffic_optimization/services/osm_only_traffic_service.dart';
 import 'package:urban_service_traffic_optimization/widgets/osm_only_traffic_widget.dart';
+import 'package:urban_service_traffic_optimization/widgets/osm_traffic_stats.dart';
 
 /// Map page with traffic visualization
 class OSMTrafficMapPage extends StatefulWidget {
@@ -21,7 +23,7 @@ class _OSMTrafficMapPageState extends State<OSMTrafficMapPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('OSM Traffic Map'),
+        title:  Text('OSM Traffic Map',style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
         actions: [
           IconButton(
             onPressed: () {

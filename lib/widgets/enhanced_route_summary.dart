@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:urban_service_traffic_optimization/models/air_quality_model.dart';
 import 'package:urban_service_traffic_optimization/models/osm_route_model.dart';
@@ -155,9 +156,9 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
               children: [
                 const Icon(Icons.route, color: Colors.blue, size: 24),
                 const SizedBox(width: 8),
-                const Text(
+                 Text(
                   'Route Summary',
-                  style: TextStyle(
+                  style: GoogleFonts.playfairDisplay(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -231,13 +232,13 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Row(
+             Row(
               children: [
                 Icon(Icons.navigation, color: Colors.blue, size: 20),
                 SizedBox(width: 8),
                 Text(
                   '📍 Route Summary',
-                  style: TextStyle(
+                  style: GoogleFonts.playfairDisplay(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -329,9 +330,9 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
               children: [
                 const Icon(Icons.traffic, color: Colors.red, size: 20),
                 const SizedBox(width: 8),
-                const Text(
+                 Text(
                   '🔴 Live Traffic',
-                  style: TextStyle(
+                  style: GoogleFonts.playfairDisplay(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -559,9 +560,9 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
                   style: const TextStyle(fontSize: 20),
                 ),
                 const SizedBox(width: 8),
-                const Text(
+                 Text(
                   '🌦️ Weather Impact',
-                  style: TextStyle(
+                  style: GoogleFonts.playfairDisplay(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -661,10 +662,10 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
                   style: const TextStyle(fontSize: 20),
                 ),
                 const SizedBox(width: 8),
-                const Text(
+                 Text(
                   '🌫️ Environment (Crowd IoT Sensors)',
-                  style: TextStyle(
-                    fontSize: 16,
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -831,7 +832,7 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
               _showDetailedRouteInfo();
             },
             icon: const Icon(Icons.info),
-            label: const Text('Route Details'),
+            label:  Text('Route Details',style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue,
               foregroundColor: Colors.white,
@@ -852,7 +853,7 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
               );
             },
             icon: const Icon(Icons.navigation),
-            label: const Text('Start Route'),
+            label:  Text('Start Route',style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.green,
               foregroundColor: Colors.white,
@@ -869,7 +870,7 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Detailed Route Information'),
+        title:  Text('Detailed Route Information', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
         content: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -881,9 +882,9 @@ class _EnhancedRouteSummaryState extends State<EnhancedRouteSummary> {
               _buildDetailRow('Roads Count', '${widget.route.roads.length}'),
               if (widget.route.roads.isNotEmpty) ...[
                 const SizedBox(height: 8),
-                const Text(
+                 Text(
                   'Main Roads:',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 4),
                 ...widget.route.roads.take(3).map((road) => 

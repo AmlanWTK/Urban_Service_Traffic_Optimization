@@ -90,8 +90,8 @@ class AboutCompletePage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 12),
-                    _buildBenefit('✅', '100% free to use - no API costs or subscriptions'),
-                    _buildBenefit('✅', 'No API keys required - works immediately'),
+                  
+           
                     _buildBenefit('✅', 'Combines multiple transport modes intelligently'),
                     _buildBenefit('✅', 'Uses real OpenStreetMap and GTFS data'),
                     _buildBenefit('✅', 'Provides practical route alternatives'),

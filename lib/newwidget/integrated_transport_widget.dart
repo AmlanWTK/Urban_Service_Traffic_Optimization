@@ -766,12 +766,7 @@ class _IntegratedTransportWidgetState extends State<IntegratedTransportWidget> {
                     'Drive',
                     Colors.blue,
                   ),
-                  _buildModeButton(
-                    TransportModeType.transit,
-                    Icons.directions_bus,
-                    'Transit',
-                    Colors.green,
-                  ),
+                
                   _buildModeButton(
                     TransportModeType.rideshare,
                     Icons.local_taxi,

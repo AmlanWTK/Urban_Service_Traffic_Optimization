@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /// Statistics page showing traffic analysis
 class TrafficStatsPage extends StatelessWidget {
@@ -9,9 +10,9 @@ class TrafficStatsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Traffic Statistics'),
+        title:  Text('Traffic Statistics', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
       ),
-      body: const SingleChildScrollView(
+      body:  SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +29,7 @@ class TrafficStatsPage extends StatelessWidget {
                         SizedBox(width: 8),
                         Text(
                           'How to View Traffic Statistics',
-                          style: TextStyle(
+                          style:GoogleFonts.playfairDisplay(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
@@ -71,7 +72,7 @@ class TrafficStatsPage extends StatelessWidget {
                         SizedBox(width: 8),
                         Text(
                           'Traffic Simulation Accuracy',
-                          style: TextStyle(
+                          style: GoogleFonts.playfairDisplay(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
@@ -99,7 +100,7 @@ class TrafficStatsPage extends StatelessWidget {
           Navigator.pushNamed(context, '/map');
         },
         icon: const Icon(Icons.map),
-        label: const Text('View Traffic Map'),
+        label:  Text('View Traffic Map',style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold),),
         backgroundColor: Colors.green,
       ),
     );
